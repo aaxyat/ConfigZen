@@ -35,5 +35,5 @@ If you want to contact me you can reach me at <mail@ayushb.com>.
 ---
 
 <p align="center">
-  Last updated: Month, Day, Year
+<p align="center">Last updated: 2023-08-06 03:32 PM</p>
 </p>
