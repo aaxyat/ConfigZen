@@ -1,0 +1,26 @@
+name: Update README
+
+on:
+  push:
+    branches:
+      - main  # or your default branch name
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Update README
+        run: |
+          d=$(date +'%Y-%m-%d')
+          sed -i "s/^.*Last updated: .*$/<p align=\"center\">Last updated: $d<\/p>/g" README.md
+
+      - name: Commit and push if changed
+        run: |
+          git diff
+          git config --global user.email "action@github.com"
+          git config --global user.name "GitHub Action"
+          git commit -am "Update README" && git push origin || echo "No changes to commit"
