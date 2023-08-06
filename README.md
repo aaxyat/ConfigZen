@@ -14,11 +14,13 @@ Welcome to ConfigZen, a curated collection of my personal dotfiles, scripts, and
 
 ## ⚙️ Scripts ⚙️
 
-### SwitchToWindowsTerminal.ahk
+### `Windows Terminal Hotkey Automation (AHK)`
 
-An AutoHotkey (AHK) script for managing Windows Terminal instances. It includes functions to switch to an existing terminal, minimize it if it's already focused, or run a new instance if none exists. There are also dedicated functions and hotkeys for managing terminal instances with admin privileges.
+This script contains two AutoHotkey functions, `SwitchToWindowsTerminal` and `SwitchToWindowsTerminalAdmin`. The functions check if Windows Terminal is already open and if so, they minimize or put it in focus depending on the current state of the window. If Windows Terminal is not open, they launch it. Hotkeys have also been set up to activate these functions.
 
-[View Script](scripts/SwitchToWindowsTerminal.ahk)
+### `winSetup.ps1 (PowerShell)`
+
+This PowerShell script automates the installation and setup of several tools and packages for a Windows environment, including PowerShell 7, StartAllBack, and many others installed via Chocolatey. The script also installs a set of PowerShell 7 modules, modifies the PowerShell 7 execution policy, and sets up a PowerShell 7 profile from a provided gist. The script also sets up the Windows Terminal and Starship settings from provided gists. Finally, it compiles an AutoHotkey script and sets it up to run on startup.
 
 ## 🔗 Website Links 🔗
 
@@ -28,10 +30,10 @@ Contributions are always welcome! Please read the contribution guidelines first.
 
 ## 📧 Contact 📧
 
-If you want to contact me you can reach me at <your-email@domain.com>.
+If you want to contact me you can reach me at <mail@ayushb.com>.
 
 ---
 
 <p align="center">
-<p align="center">Last updated: 2023-08-06</p>
+  Last updated: Month, Day, Year
 </p>
