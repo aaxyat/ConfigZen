@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.REPO_ACCESS_TOKEN }}  # Use the REPO_ACCESS_TOKEN here
 
       - name: Update README
         run: |
@@ -24,4 +26,5 @@ jobs:
           git diff
           git config --global user.email "action@github.com"
           git config --global user.name "GitHub Action"
+          git remote set-url origin https://x-access-token:${{ secrets.REPO_ACCESS_TOKEN }}@github.com/${{ github.repository }}.git
           git commit -am "Update README" && git push origin || echo "No changes to commit"
